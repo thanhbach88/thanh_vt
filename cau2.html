@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="script.js"></script>
+  <style>
+    .myclass{
+      color: red
+
+    }
+  </style>
+</head>
+    <body>
+      <h1 onclick="myFuntion()">Add solution</h1>
+      <p>Frist Paragraph</p>
+      <p>Second Pragraph</p>
+
+      <script>
+        function myFuntion(){
+          var d = Document.getElementsByTagName("p");
+          d[0].className +="myclass"
+          d[1].className +="myclass"
+        } 
+      </script>
+    </body>
+</html>

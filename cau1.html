@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+	<script language="javascript">
+          function change_background()
+          {
+             document.getElementById("message").style.background = 'red';
+          }
+          
+          function change_color()
+          {
+             document.getElementById("message").style.color = 'blue';
+          }
+          
+          function change_height()
+          {
+             document.getElementById("message").style.height = '500px';
+          }
+          
+          function change_font_size()
+          {
+             document.getElementById("message").style.fontSize = '30px';
+          }
+        </script>
+      	<div id="message" style="background-color: yellow">
+          
+         	<p>Text</p>
+      	</div>
+        <input type="button" value="Change backgroud" onclick="change_background()"/>
+    </body>
+</html>
+<html>
+    <body>
+        <script language="javascript">
+          function validate()
+          {
+            // Lấy giá trị input
+             var username = document.getElementById("username").value;
+             var password = document.getElementById("password").value;
+             
+            // Lấy đối tượng message
+            var message = document.getElementById("message");
+             
+            // Validate
+            if (username == "" || password == ""){
+                message.innerHTML = "Bạn chưa nhập đầy đủ thông tin!";
+                message.style.color = "red";
+            }
+             
+            else{
+                message.innerHTML = "Chúc mừng ban, validate thành công!";
+                message.style.color = "blue";
+            }
+             
+          }
+        </script>
+        Username: <input type="text" value="" id="username" /> <br/>
+        Username: <input type="password" value="" id="password" /> <br/>
+        <div id="message"></div>
+        <input type="button" value="Login" onclick="validate()"/>
+    </body>
+</html>
